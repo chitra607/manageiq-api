@@ -1149,10 +1149,14 @@
     :description: Container Nodes
     :identifier: container_node
     :klass: ContainerNode
-    :verbs: *gp
+    :verbs: *gpppd
     :options:
     - :collection
     - :custom_actions
+    - :subcollection
+    :subcollections:
+    - :tags
+    - :custom_attributes
     :collection_actions:
       :get:
       - :name: read
@@ -1169,6 +1173,10 @@
       :post:
       - :name: check_compliance
         :identifier: container_node_check_compliance
+      - :name: edit
+        :identifier: container_node_edit
+      - :name: get_metadata
+        :identifier: container_node_edit
   :container_projects:
     :description: Container Projects
     :identifier: container_project
